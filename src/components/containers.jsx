@@ -1,16 +1,20 @@
 import { Container } from "@mui/material"
-import Headwarpper from "../Header/headerWrapper"
+import HeaderWrapper from "./header/HeaderWrapper"
+import HomePage from "./HomePage"
+import ShopPage from "./ShopPage"
+import BoardPage from "./BoardPage"
+import ChatPage from "./ChatPage"
 import { Routes, Route } from "react-router-dom"
 
 export default function Containers() {
   return (
     <Container>
-      <Headwarpper />
+      <HeaderWrapper />
       <Routes>
-        <Route path="/" element={<home />} />
-        <Route path="/shop" element={<shop />} />
-        <Route path="/board" element={<board />} />
-        <Route path="/chat" element={<chat />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/shop" element={<ShopPage />} />
+        <Route path="/board" element={<BoardPage />} />
+        <Route path="/chat" element={<ChatPage />} />
       </Routes>
     </Container>
   )
