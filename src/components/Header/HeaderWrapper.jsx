@@ -11,7 +11,7 @@ export default function HeaderWrapper() {
       }}
     >
       <Typography variant="h4" component={Link} to="/">
-        Booldook
+        LilyMorpho
       </Typography>
       <Breadcrumbs>
         <Typography component={Link} to="/shop">
