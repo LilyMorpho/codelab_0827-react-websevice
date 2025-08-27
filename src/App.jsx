@@ -1,6 +1,6 @@
 import { BrowserRouter } from "react-router-dom"
 
-import Containers from "./containers/Containers"
+import Containers from "./Containers"
 
 function App() {
   return (

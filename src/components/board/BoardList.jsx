@@ -6,7 +6,7 @@ export default function BoardList() {
     const url = "https://jsonplaceholder.typicode.com/posts"
     const [list, setList] = useState([])
 
-    const getPosts = async () => 
+    const getPosts = async () => {
         const url = "https://jsonplaceholder.typicode.com/posts"
     const {data} = await axios.get(url)
     setList(data)

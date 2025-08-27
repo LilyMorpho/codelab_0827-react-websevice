@@ -60,7 +60,7 @@ module.exports = {
       configType: "flat",
       context: path.resolve(__dirname, "src"),
       extensions: [".js", ".jsx"],
-      exclude: ["node_modules", "dist"],
+      exclude: ["node_modules", "dist", " webpack.config.cjs"],
       overrideConfigFile: "./eslint.config.cjs",
       emitError: true,
       emitWarning: true,
@@ -78,6 +78,7 @@ module.exports = {
         publicPath: "/",
       },
     ],
+    HistoryApiFallback: true,
     compress: true,
     port: 3000,
     hot: true,
@@ -85,8 +86,8 @@ module.exports = {
   },
   performance: {
     hints: "warning",
-    maxAssetSize: 2000000,
-    maxEntrypointSize: 4000000,
+    maxAssetSize: 200000000,
+    maxEntrypointSize: 400000000,
     assetFilter: function (assetFilename) {
       return assetFilename.endsWith(".js")
     },
