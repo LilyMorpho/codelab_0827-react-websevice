@@ -50,9 +50,6 @@ module.exports = {
         {
           from: path.resolve(__dirname, "public"),
           to: path.resolve(__dirname, "dist"),
-          globOptions: {
-            ignore: ["**/css/**"], // css 폴더 제외
-          },
         },
       ],
     }),
@@ -78,16 +75,16 @@ module.exports = {
         publicPath: "/",
       },
     ],
-    HistoryApiFallback: true,
+    historyApiFallback: true,
     compress: true,
-    port: 3000,
+    port: 3100,
     hot: true,
     open: true,
   },
   performance: {
     hints: "warning",
-    maxAssetSize: 200000000,
-    maxEntrypointSize: 400000000,
+    maxAssetSize: 20000000,
+    maxEntrypointSize: 40000000,
     assetFilter: function (assetFilename) {
       return assetFilename.endsWith(".js")
     },
