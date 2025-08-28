@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-
 import {
   Table,
   TableBody,
@@ -19,24 +18,23 @@ export default function BoardList() {
     const { data } = await axios.get(url)
     setList(data)
   }
+
   useEffect(() => {
-    /*const url = "https://jsonplaceholder.typicode.com/posts"
-      const [list, setList] = useState([])
-      const getPosts = async () => {
-        const url = "https://jsonplaceholder.typicode.com/posts"
-        const { data } = await axios.get(url)
-        setList(data)
-      } */
+    // ;(async () => {
+    //   const url = "https://jsonplaceholder.typicode.com/posts"
+    //   const { data } = await axios.get(url)
+    //   setList(data)
+    // })()
     getPosts()
   }, [])
 
   return (
-    <TableContainer component={{ Paper }}>
+    <TableContainer component={Paper}>
       <Table sx={{ minWidth: 650 }}>
         <TableHead>
           <TableRow>
-            <TableCell align="center">id</TableCell>
-            <TableCell align="center">Title</TableCell>
+            <TableCell>번호</TableCell>
+            <TableCell>제목</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

@@ -1,12 +1,12 @@
 import { useState } from "react"
 
-const FormWrapper = ({ children, onGetPrd, onResetPrd, onChangeSearch }) => {
+const FormWrapper = ({ onGetPrd, onResetPrd, onChangeSearch }) => {
   const [search, setSearch] = useState("")
   const onChange = (e) => {
     setSearch(e.target.value)
     onChangeSearch(e.target.value)
   }
-  const onDeleteSearch = (e) => {
+  const onDeleteSearch = () => {
     setSearch("")
     onChangeSearch("")
   }
