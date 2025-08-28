@@ -60,7 +60,7 @@ module.exports = {
       configType: "flat",
       context: path.resolve(__dirname, "src"),
       extensions: [".js", ".jsx"],
-      exclude: ["node_modules", "dist", " webpack.config.cjs"],
+      exclude: ["node_modules", "dist", "webpack.config.cjs"],
       overrideConfigFile: "./eslint.config.cjs",
       emitError: true,
       emitWarning: true,
